@@ -113,7 +113,7 @@ where
                             break;
                         }
 
-                        if max_t - min_t < abs_tol {
+                        if max_t - min_t < max_t.max(na::convert(1.)) * abs_tol {
                             result.toi = min_t;
                             break;
                         }
